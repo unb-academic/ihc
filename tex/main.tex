@@ -18,7 +18,6 @@
 \usepackage{microtype}
 \usepackage[brazilian,hyperpageref]{backref}
 \usepackage{abntex2cite}
-\usepackage{lipsum}
 \usepackage{customization}
 
 \renewcommand{\backrefpagesname}{Citado na(s) página(s):~}
@@ -121,7 +120,10 @@
  resumo, antecedidas da expressão Palavras-chave:, separadas entre si por
  ponto e finalizadas também por ponto.
 
- \textbf{Palavras-chave}: latex. abntex. editoração de texto.
+  \textbf{Palavras-chave}:
+  Interação Humano-Computador. Guia de acessibilidade digital. Design de
+  Serviços. Pessoas com deficiência. Tecnologia da informação. Experiência do
+  usuário. Acessibilidade.
 \end{resumo}
 
 \cleardoublepage
@@ -136,25 +138,25 @@
 
 \begin{siglas}
   \item[IHC] Interação Humano-Computador
-  \item[IBGE] Instituto Brasileiro de Geografia e Estatística
-  \item[DS] Design de Serviços
   \item[TI] Tecnologia da Informação
   \item[PCD] Pessoas com Deficiência
-  \item[eMAG] Modelo de Acessibilidade em Governo Eletrônico
-  \item[ASES] Avaliador e Simulador de Acessibilidade em Sítios
-  \item[UCD] \textit{User-Centered Design}
-  \item[UX] \textit{User Experience}
-  \item[ISO] \textit{International Organization for Standardization}
+  \item[IBGE] Instituto Brasileiro de Geografia e Estatística
   \item[WCAG] \textit{Web Content Accessibility Guidelines}
   \item[W3C] \textit{World Wide Web Consortium}
-  \item[WAI] \textit{Web Accessibility Initiative}
-  \item[WAI-ARIA] \textit{Web Accessibility Initiative - Accessible Rich Internet Applications}
-  \item[IHIP] \textit{Intangible, Heterogeneous, Inseparable and Perishable}
-  \item[DOM] \textit{Document Object Model}
-  \item[HTML] \textit{HyperText Markup Language}
-  \item[CSS] \textit{Cascading Style Sheets}
-  \item[XML] \textit{eXtensible Markup Language}
-  \item[XHTML] \textit{eXtensible HyperText Markup Language}
+  % \item[DS] Design de Serviços
+  % \item[eMAG] Modelo de Acessibilidade em Governo Eletrônico
+  % \item[ASES] Avaliador e Simulador de Acessibilidade em Sítios
+  % \item[UCD] \textit{User-Centered Design}
+  % \item[UX] \textit{User Experience}
+  % \item[ISO] \textit{International Organization for Standardization}
+  % \item[WAI] \textit{Web Accessibility Initiative}
+  % \item[WAI-ARIA] \textit{Web Accessibility Initiative - Accessible Rich Internet Applications}
+  % \item[IHIP] \textit{Intangible, Heterogeneous, Inseparable and Perishable}
+  % \item[DOM] \textit{Document Object Model}
+  % \item[HTML] \textit{HyperText Markup Language}
+  % \item[CSS] \textit{Cascading Style Sheets}
+  % \item[XML] \textit{eXtensible Markup Language}
+  % \item[XHTML] \textit{eXtensible HyperText Markup Language}
 \end{siglas}
 
 \begin{simbolos}
@@ -181,8 +183,7 @@ O objetivo é oferecer a todo profissional da área de TI subsídios teóricos e
 práticos, tanto no âmbito documental e ferramental, para que o desenvolvedor
 possa compreender os conceitos sobre IHC e aplique estratégias de transformação
 digital acessível, considerando que o sistema a ser desenvolvido será adequado à
-pessoas com deficiência e implemente a estrutura de acessibilidade definida pelo
-Governo Federal.
+PCDs e implemente a estrutura de acessibilidade definida pelo Governo Federal.
 
 Esse material se faz de grande importância para manter os conhecimentos
 ``frescos'' sobre acessibilidade na web, seja para o profissional que não
@@ -198,7 +199,7 @@ falta de botões acessíveis podem se tornar um grande empecilho ao indivíduo.
 Quando conteúdos presentes na internet, em aplicativos para telefone, vídeos nas
 plataformas digitais e conteúdos televisivos são acessíveis, todas as pessoas
 são beneficiadas, especialmente as que possuem algum tipo de deficiência,
-oferecendo conforto e segurança a este público alvo.
+oferecendo conforto e segurança a este público-alvo.
 
 As diretrizes do WCAG do W3C oferecem um caminho acessível à web, com a
 acessibilidade sendo tratada em três grandes pontos: design, conteúdo e
@@ -216,302 +217,11 @@ Ao final desta etapa, espera-se do profissional de TI que:
     desenvolvimento pode acarretar na população.
 \end{itemize}
 
-\chapter{Como IHC interpreta DS}
-
-O cenário do design de tecnologia da informação mudou significativamente, com
-novas abordagens para gerenciar de forma eficaz sistemas de informação e
-múltiplos \textit{stakeholders} surgindo a todo momento. Devido a isso, o design
-de serviços já é uma realidade no mundo corporativo, consistindo em uma
-metodologia para ajustar os pontos de contato com seus clientes, de forma que a
-experiência deles possa ser enriquecida e processos internos da empresa sejam
-otimizados paralelamente.
-
-Historicamente, o design de serviços surge como uma abordagem crítica que evolui
-na década de 1980 dentro dos estudos de gestão e operações, caracterizado por
-focar em serviços intangíveis, heterogêneos e perecíveis, muitas vezes baseados
-no IHIP, um modelo utilizado que caracteriza serviços em contraste com produtos
-físicos. Nos anos 1990, a popularidade do design de serviços nas comunidades de
-design enfatizou abordagens criativas e centradas no ser humano. Por fim, no
-início dos anos 2000, a lógica dominante do serviço confundiu ainda mais a
-distinção entre produtos tangíveis e serviços intangíveis, com foco na
-co-criação de valor \cite{DAP:Guia-de-Boas-Praticas}.
-
-\chapter{Histórico UCD a UX e ISOs}
-
-A jornada do UCD, do UX e dos ISOs se entrelaça em uma história de evolução
-constante, marcada pela busca incessante por criar experiências digitais
-acessíveis e inclusivas para todos os usuários.
-
-No início da década de 1980, a ergonomia dominava o campo do design de
-interfaces, com foco na otimização da eficiência e da produtividade. No entanto,
-o UCD surgiu como um paradigma emergente, defendendo a centralidade do usuário
-no processo de design. Essa mudança de foco reconheceu a importância de entender
-as necessidades, expectativas e comportamentos dos usuários para criar
-interfaces intuitivas e satisfatórias
-\cite{Adriana:A-Closer-Look-on-the-User-Centred-Design}.
-
-Com o avanço da tecnologia e a diversificação das plataformas digitais, o UX se
-consolidou como um conceito abrangente que engloba todos os aspectos da
-experiência do usuário em um produto ou serviço. Essa abordagem holística
-considera fatores como a usabilidade, a estética, a emoção e o significado,
-buscando criar experiências memoráveis e positivas para os usuários.
-
-O ISO, organização internacional dedicada à padronização, desempenha um papel
-crucial na promoção da acessibilidade digital. Seus padrões, como o ISO
-9241-11:2018, estabelecem diretrizes para o design e desenvolvimento de produtos
-e serviços acessíveis a pessoas com deficiência \cite{ISO:9241-11:2018}. A
-adoção desses padrões garante que as soluções digitais sejam inclusivas e
-atendam às necessidades de todos os usuários.
-
-O UCD, o UX e os ISOs se complementam e se reforçam em sua missão de criar
-experiências digitais acessíveis. O UCD fornece a metodologia para entender as
-necessidades dos usuários, o UX oferece a perspectiva holística da experiência
-do usuário e os ISOs definem os padrões que garantem a implementação da
-acessibilidade.
-
-\chapter{Modelo de Acessibilidade}
-
-O eMAG consiste em um conjunto de recomendações a ser considerado para que o
-processo de acessibilidade dos sites e portais do governo brasileiro seja
-conduzido de forma padronizada e de fácil implementação. Ele é coerente com as
-necessidades brasileiras e em conformidade com os padrões internacionais, sendo
-formulado para orientar profissionais que tenham contato com publicação de
-informações ou serviços na internet a desenvolver, alterar  e/ou adequar
-páginas, sites e portais, tornando-os acessíveis ao maior número de pessoas
-possível.
-
-\section{O Acesso de PCDs}
-
-Quatro principais situações vivenciadas por usuários com deficiência são:
-
-\begin{enumerate}
-  \item
-    acesso ao computador sem mouse (pessoas com deficiência visual, dificuldade
-    de controle dos movimentos, paralisia ou amputação de um membro superior);
-  \item
-    acesso ao computador sem teclado (pessoas com amputações, grandes limitações
-    de movimentos ou falta de força nos membros superiores);
-  \item acesso ao computador sem monitor (pessoas com deficiência visual); e
-  \item acesso ao computador sem áudio (pessoas com deficiência auditiva).
-\end{enumerate}
-
-Muitas vezes, a deficiência não é severa o suficiente a ponto de se tornar uma
-barreira à utilização dos aparelhos tecnológicos. Entretanto, nos quatro tipos
-de situações citadas anteriormente, barreiras de acessibilidade são encontradas,
-dificultando o acesso ao conteúdo. Por serem as quatro principais situações
-encontradas, muitos sistemas web englobam apenas políticas de desenvolvimento
-que entreguem acessibilidade a tal público. Entretanto, por não serem apenas as
-únicas deficiências que sofrem com acessibilidade, os projetos presentes na
-internet devem englobar desde diferentes níveis de acessibilidade, faixa etária
-e pouca experiência de computador, bem como ser compatível com as tecnologias
-usadas para o acesso àquela informação específica.
-
-É importante ressaltar que, por mais que também existam recursos responsáveis
-por auxiliar PCDs na web, como os teclados adaptados, ampliadores de tela e
-mouses especiais, tais ferramentas não são capazes de conferir toda a
-acessibilidade que o usuário precisa para que ele tenha uma boa experiência.
-Dessa forma, desenvolver a página de acordo com os padrões web e as
-recomendações de acessibilidade são intrinsecamente importantes para todo
-projeto.
-
-\section{O Processo para Desenvolver Sistemas de Informação Acessíveis}
-
-A acessibilidade na internet refere-se a garantir acesso facilitado para
-qualquer indivíduo que, independente de suas condições mundanas, consiga
-concluir seu objetivo. Dito isso, para desenvolver tais sistemas, três passos
-são considerados:
-
-\begin{enumerate}
-  \item seguir os padrões da web;
-  \item seguir as diretrizes ou recomendações de acessibilidade; e
-  \item realizar a avaliação de acessibilidade.
-\end{enumerate}
-
-\section{Padrões Web}
-
-Para que a acessibilidade necessária seja conferida ao sistema web, o código
-deve estar nos padrões internacionais definidos pelo W3C. Estes padrões,
-conhecidos como \textit{web standards}, são um conjunto de recomendações que
-visam padronizar todo conteúdo que esteja na internet, possibilitando melhores
-práticas de desenvolvimento de páginas. Normas HTML, XML, XHTML e CSS devem ser
-seguidas tanto na formatação semântica, como na sintática, com cada elemento
-utilizado tenho um significado apropriado, valor e propósito.
-
-Esta conformidade permite que qualquer acesso à informação seja interpretado da
-mesma forma e adequadamente por todos os indivíduos que a encontrem, seja por
-meio dos navegadores, leitores de tela, dispositivos móveis, etc. Páginas que
-não possuem código de acordo com os padrões do W3C apresentam comportamento
-imprevisível e, na maioria das vezes, dificultam o acesso à informação.
-
-\section{Recomendações de Acessibilidade}
-
-As recomendações de acessibilidade explicam como tornar o conteúdo web acessível
-a todas as pessoas, sendo importante para criadores de conteúdo e programadores
-de ferramentas para criação de conteúdo, com sua principal documentação sendo a
-WCAG, desenvolvida pelo consórcio W3C a partir da criação do WAI. O WAI ainda
-desenvolveu especificações para aplicações web, ainda boa parte em status de
-``rascunho'', chamados WAI-ARIA, que busca resolver muitos dos problemas da
-camada de comportamento (DOM), sendo parte já implementada por alguns
-navegadores. Por fim, o eMAG é o documento que norteia o desenvolvimento de
-sites e portais acessíveis no âmbito do Governo Federal.
-
-Apesar de tornarem a avaliação de acessibilidade mais rápida e menos trabalhosa,
-os validadores automáticos por si só não determinam se um site está ou não
-acessível, o que torna uma validação manual posterior necessária. Por meio da
-validação manual, um checklist de validação humana é utilizado com o intuito de
-que todos os problemas de acessibilidade em um site que não são detectados
-mecanicamente pelos validadores sejam alcançados e tratados de forma correta,
-com correções e novos testes após cada teste.
-
-Os passos sugeridos para a avaliação de acessibilidade em um sistema de
-informação web, de acordo com o eMAG, estão ligadas a seguir.
-
-\begin{enumerate}
-  \item Validar os \textbf{códigos do conteúdo HTML e das folhas de estilo}.
-  \item
-    Verificar o \textbf{fluxo de leitura da página}. A forma mais simples é
-    inibir o CSS, imagens e scripts, lendo apenas o HTML da página. Boa
-    parte dos navegadores possuem ferramentas ou extensões que permitem essa
-    visualização.
-  \item
-    Realizar a validação automática de acessibilidade utilizando o ASES e outros
-    avaliadores automáticos.
-  \item
-    Realizar a validação manual. A validação manual é uma etapa essencial na
-    avaliação de acessibilidade de um site, já que os validadores automáticos
-    não são capazes de detectar todos os problemas de acessibilidade em um site,
-    pois muitos aspectos requerem um julgamento humano. Por exemplo, validadores
-    automáticos conseguem detectar se o atributo para descrever imagens foi
-    utilizado em todas as imagens do sites, mas somente uma pessoa poderá
-    verificar se a descrição da imagem está adequada ao seu conteúdo. Para
-    realizar uma validação manual efetiva, o desenvolvedor deverá ter
-    conhecimento sobre as diferentes tecnologias, as barreiras de acessibilidade
-    enfrentadas por pessoas com deficiência e as técnicas ou recomendações de
-    acessibilidade. A validação manual deve ser feita preferencialmente com
-    dispositivos de tecnologia assistiva como leitores de tela. Deve-se
-    percorrer toda página apenas utilizando teclado, verificando comportamentos,
-    atalhos, folhas alternativas de contraste, se os textos alternativos estão
-    descritos de acordo com a imagem e seu contexto, entre outros.
-  \item
-    \textbf{Teste com usuários reais}. Outra etapa essencial da validação de uma
-    página é a realização de testes com usuários reais (PCD ou limitações
-    técnicas). Um usuário real poderá dizer se um sítio está realmente
-    acessível, compreensível e com boa usabilidade e não simplesmente
-    tecnicamente acessível. Quanto maior e mais diversificado o número de
-    usuários reais participando da avaliação de acessibilidade, mais eficaz e
-    robusto será o resultado.
-\end{enumerate}
-
-\section{Manutenção da Acessibilidade}
-
-A promoção da acessibilidade é um processo contínuo, recomenda-se que testes
-sejam realizados, de forma pontual, a cada alteração de conteúdo e validações
-globais em espaços determinados de tempo. O intervalo depende de diversos
-fatores, mas a recomendação é que se valide o site todo quando for feita a
-atualização do Sistema de Gestão de Conteúdo ou mudança de desenho.
-
-\section{Recursos de Acessibilidade}
-
-Os padrões de acessibilidade compreendem recomendações ou diretrizes que visam
-tornar o conteúdo web acessível a todas as pessoas, inclusive às PCD,
-destinando-se aos autores de páginas, projetistas de sites e aos desenvolvedores
-de ferramentas para criação de conteúdo. Para facilitar a implementação das
-recomendações, no eMAG elas são separadas por seções de acordo com as
-necessidades de implementação:
-
-\begin{itemize}
-  \item marcação;
-  \item comportamento (DOM);
-  \item conteúdo/informação;
-  \item apresentação/design;
-  \item multimídia; e
-  \item formulário.
-\end{itemize}
-
-
-% ---
-% Conclusão
-% ---
 \chapter{Conclusão}
-% ---
 
-\lipsum[31-33]
-
-% ----------------------------------------------------------
-% ELEMENTOS PÓS-TEXTUAIS
-% ----------------------------------------------------------
 \postextual
-% ----------------------------------------------------------
 
 \bibliography{refs}
-
-% ----------------------------------------------------------
-% Glossário
-% ----------------------------------------------------------
-%
-% Consulte o manual da classe abntex2 para orientações sobre o glossário.
-%
-%\glossary
-
-% ----------------------------------------------------------
-% Apêndices
-% ----------------------------------------------------------
-
-% ---
-% Inicia os apêndices
-% ---
-\begin{apendicesenv}
-
-% Imprime uma página indicando o início dos apêndices
-\partapendices
-
-% ----------------------------------------------------------
-\chapter{Quisque libero justo}
-% ----------------------------------------------------------
-
-\lipsum[50]
-
-% ----------------------------------------------------------
-\chapter{Nullam elementum urna vel imperdiet sodales elit ipsum pharetra ligula
-ac pretium ante justo a nulla curabitur tristique arcu eu metus}
-% ----------------------------------------------------------
-\lipsum[55-57]
-
-\end{apendicesenv}
-% ---
-
-
-% ----------------------------------------------------------
-% Anexos
-% ----------------------------------------------------------
-
-% ---
-% Inicia os anexos
-% ---
-\begin{anexosenv}
-
-% Imprime uma página indicando o início dos anexos
-\partanexos
-
-% ---
-\chapter{Morbi ultrices rutrum lorem.}
-% ---
-\lipsum[30]
-
-% ---
-\chapter{Cras non urna sed feugiat cum sociis natoque penatibus et magnis dis
-parturient montes nascetur ridiculus mus}
-% ---
-
-\lipsum[31]
-
-% ---
-\chapter{Fusce facilisis lacinia dui}
-% ---
-
-\lipsum[32]
-
-\end{anexosenv}
 
 %---------------------------------------------------------------------
 % INDICE REMISSIVO
