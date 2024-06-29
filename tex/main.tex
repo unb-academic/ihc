@@ -35,7 +35,7 @@
 \titulo{Guia de Acessibilidade Digital}
 \autor{Grupo 06}
 \local{Brasília, Brasil}
-\data{2024, v0.2.0}
+\data{2024, v1.3.0}
 \orientador{Rejane Figueiredo}
 \instituicao{
   Universidade de Brasília
@@ -122,49 +122,34 @@
 
   \textbf{Palavras-chave}:
   Interação Humano-Computador. Guia de acessibilidade digital. Design de
-  Serviços. Pessoas com deficiência. Tecnologia da informação. Experiência do
+  serviços. Pessoas com deficiência. Tecnologia da informação. Experiência do
   usuário. Acessibilidade.
 \end{resumo}
 
 \cleardoublepage
 
-\pdfbookmark[0]{\listofquadrosname}{loq}
-\listofquadros*
-\cleardoublepage
-
-\pdfbookmark[0]{\listtablename}{lot}
-\listoftables*
-\cleardoublepage
-
 \begin{siglas}
+  \item[ASES] Avaliador e Simulador de Acessibilidade em Sítios
+  \item[CSS] \textit{Cascading Style Sheets}
+  \item[DOM] \textit{Document Object Model}
+  \item[eMAG] Modelo de Acessibilidade em Governo Eletrônico
   \item[IHC] Interação Humano-Computador
-  \item[TI] Tecnologia da Informação
-  \item[PCD] Pessoas com Deficiência
+  \item[HTML] \textit{HyperText Markup Language}
   \item[IBGE] Instituto Brasileiro de Geografia e Estatística
-  \item[WCAG] \textit{Web Content Accessibility Guidelines}
+  \item[PCD] Pessoas com Deficiência
+  \item[TI] Tecnologia da Informação
   \item[W3C] \textit{World Wide Web Consortium}
+  \item[WAI] \textit{Web Accessibility Initiative}
+  \item[WCAG] \textit{Web Content Accessibility Guidelines}
+  \item[WAI-ARIA] \textit{Web Accessibility Initiative - Accessible Rich Internet Applications}
+  \item[XHTML] \textit{eXtensible HyperText Markup Language}
+  \item[XML] \textit{eXtensible Markup Language}
   % \item[DS] Design de Serviços
-  % \item[eMAG] Modelo de Acessibilidade em Governo Eletrônico
-  % \item[ASES] Avaliador e Simulador de Acessibilidade em Sítios
   % \item[UCD] \textit{User-Centered Design}
   % \item[UX] \textit{User Experience}
   % \item[ISO] \textit{International Organization for Standardization}
-  % \item[WAI] \textit{Web Accessibility Initiative}
-  % \item[WAI-ARIA] \textit{Web Accessibility Initiative - Accessible Rich Internet Applications}
   % \item[IHIP] \textit{Intangible, Heterogeneous, Inseparable and Perishable}
-  % \item[DOM] \textit{Document Object Model}
-  % \item[HTML] \textit{HyperText Markup Language}
-  % \item[CSS] \textit{Cascading Style Sheets}
-  % \item[XML] \textit{eXtensible Markup Language}
-  % \item[XHTML] \textit{eXtensible HyperText Markup Language}
 \end{siglas}
-
-\begin{simbolos}
-  \item[$ \Gamma $] Letra grega Gama
-  \item[$ \Lambda $] Lambda
-  \item[$ \zeta $] Letra grega minúscula zeta
-  \item[$ \in $] Pertence
-\end{simbolos}
 
 \pdfbookmark[0]{\contentsname}{toc}
 \tableofcontents*
@@ -205,7 +190,8 @@ As diretrizes do WCAG do W3C oferecem um caminho acessível à web, com a
 acessibilidade sendo tratada em três grandes pontos: design, conteúdo e
 desenvolvimento. O conceito de \textit{device-agnostic} é o qual o WCAG se
 baseia, o que significa que a s recomendações se referem, com contrastes e
-botões sendo acessíveis tanto no computador, como nos aparelhos móveis.
+botões sendo acessíveis tanto no computador, como nos aparelhos móveis
+\cite{DAP:Guia-de-Boas-Praticas}.
 
 Ao final desta etapa, espera-se do profissional de TI que:
 
@@ -216,6 +202,308 @@ Ao final desta etapa, espera-se do profissional de TI que:
     compreenda o impacto que introduzir acessibilidade no cotidiano do
     desenvolvimento pode acarretar na população.
 \end{itemize}
+
+\chapter{Modelo de Acessibilidade}
+
+O Modelo de Acessibilidade em Governo Eletrônico (eMAG) consiste em um conjunto
+de recomendações a ser considerado para que o processo de acessibilidade dos
+sites e portais do governo brasileiro seja conduzido de forma padronizada e de
+fácil implementação. Ele é coerente com as necessidades brasileiras e em
+conformidade com os padrões internacionais, sendo formulado para orientar
+profissionais que tenham contato com publicação de informações ou serviços na
+internet a desenvolver, alterar e/ou adequar páginas, sites e portais,
+tornando-os acessíveis ao maior número de pessoas possível.
+
+\section{O Acesso de Pessoas com Deficiência}
+
+Quatro principais situações vivenciadas por usuários com deficiência são:
+
+\begin{enumerate}
+  \item
+    acesso ao computador sem o mouse (pessoas com deficiência visual,
+    dificuldade de controle dos movimentos, paralisia ou amputação de um membro
+    superior);
+  \item
+    acesso ao computador sem teclado (pessoas com amputações, grandes limitações
+    de movimentos ou falta de força nos membros superiores);
+  \item acesso ao computador sem monitor (pessoas com deficiência visual); e
+  \item acesso ao computador sem áudio (pessoas com deficiência auditiva).
+\end{enumerate}
+
+Muitas vezes, a deficiência não é severa o suficiente a ponto de se tornar uma
+barreira à utilização dos aparelhos tecnológicos. Entretanto, nos quatro tipos
+de situações citadas anteriormente, barreiras de acessibilidade são encontradas,
+dificultando o acesso ao conteúdo. Por serem as quatro principais situações
+encontradas, muitos sistemas web englobam apenas políticas de desenvolvimento
+que entreguem acessibilidade a tal público. Entretanto, por não serem apenas as
+únicas deficiências que sofrem com acessibilidade, os projetos presentes na
+internet devem englobar desde diferentes níveis de acessibilidade, faixa etária
+e pouca experiência de computador, bem como ser compatível com as tecnologias
+usadas para o acesso àquela informação específica.
+
+É importante ressaltar que, por mais que também existam recursos responsáveis
+por auxiliar PCDs na web, como os teclados adaptados, ampliadores de tela e
+mouses especiais, tais ferramentas não são capazes de conferir toda a
+acessibilidade que o usuário precisa para que ele tenha uma boa experiência.
+Dessa forma, desenvolver a página de acordo com os padrões web e as
+recomendações de acessibilidade são intrinsecamente importantes para todo
+projeto.
+
+\section{O Processo para Desenvolver Sistemas de Informação Acessíveis}
+
+A acessibilidade na internet refere-se a garantir acesso facilitado para
+qualquer indivíduo que, independente de suas condições mundanas, consiga
+concluir seu objetivo. Dito isso, para desenvolver tais sistemas, três passos
+são considerados:
+
+\begin{enumerate}
+  \item seguir os padrões web;
+  \item seguir as diretrizes ou recomendações de acessibilidade; e
+  \item realizar a avaliação de acessibilidade.
+\end{enumerate}
+
+\section{Padrões Web}
+
+Para que a acessibilidade necessária seja conferida ao sistema web, o código
+deve estar nos padrões internacionais definidos pelo W3C. Estes padrões,
+conhecidos como \textit{web standards}, são um conjunto de recomendações que
+visam padronizar todo conteúdo que esteja na internet, possibilitando melhores
+práticas de desenvolvimento de páginas. Normas do HTML, XML, XHTML e do CSS
+devem ser seguidas tanto na formatação semântica, como na sintática, com cada
+elemento utilizado tenho um significado apropriado, valor e propósito.
+
+Esta conformidade permite que qualquer acesso à informação seja interpretado da
+mesma forma e adequadamente por todos os indivíduos que a encontrem, seja por
+meio dos navegadores, leitores de tela, dispositivos móveis, etc. Páginas que
+não possuem código de acordo com os padrões do W3C apresentam comportamento
+imprevisível e, na maioria das vezes, dificultam o acesso à informação.
+
+\section{Recomendações de Acessibilidade}
+
+As recomendações de acessibilidade explicam como tornar o conteúdo web acessível
+a todas as pessoas, sendo importante para criadores de conteúdo e programadores
+de ferramentas para criação de conteúdo, com sua principal documentação sendo a
+WCAG, desenvolvida pelo consórcio W3C a partir da criação do WAI (Web
+Accessibility Initiative). O WAI ainda desenvolveu especificações para
+aplicações web, ainda boa parte em status de ``rascunho'', chamados WAI-ARIA,
+que busca resolver muitos dos problemas da camada de comportamento (DOM), sendo
+parte já implementada por alguns navegadores. Por fim, o eMAG é o documento que
+norteia o desenvolvimento de sites e portais acessíveis no âmbito do Governo
+Federal.
+
+\section{Avaliação de Acessibilidade}
+
+O teste da acessibilidade é importante para verificar se os padrões web e
+diretrizes de acessibilidade foram garantidos durante a fase de desenvolvimento
+da aplicação. No caso dos padrões web, validadores automáticos se fazem
+presentes. Já para acessibilidade, é necessário realizar uma validação
+automática, por meio de softwares ou serviços online que ajudam a determinar se
+um site respeitou ou não as recomendações de acessibilidade, gerando um
+relatório de erros.
+
+Apesar de tornarem a avaliação de acessibilidade mais rápida e menos trabalhosa,
+os validadores automáticos por si só não determinam se um site está ou não
+acessível, o que torna uma validação manual posterior necessária. Por meio da
+validação manual, um checklist de validação humana é utilizado com o intuito de
+que todos os problemas de acessibilidade em um site que não são detectados
+mecanicamente pelos validadores sejam alcançados e tratados de forma correta,
+com correções e novos testes após cada teste.
+
+Os passos sugeridos para a avaliação de acessibilidade em um sistema de
+informação web, de acordo com o eMAG, são:
+
+\begin{enumerate}
+  \item
+    validar os \textbf{códigos do conteúdo HTML} e \textbf{das folhas de
+    estilo};
+  \item
+    verificar o \textbf{fluxo de leitura da página}. A forma mais simples é
+    inibir o CSS, imagens e scripts, lendo apenas o HTML da página. Boa parte
+    dos navegadores possuem ferramentas ou extensões que permitem essa
+    visualização;
+  \item
+    realizar a validação automática de acessibilidade utilizando o ASES e outros
+    avaliadores automáticos;
+  \item
+    realizar a validação manual. A validação manual é uma etapa essencial na
+    avaliação de acessibilidade de um site, já que os validadores automáticos
+    não são capazes de detectar todos os problemas de acessibilidade em um site,
+    pois muitos aspectos requerem um julgamento humano. Por exemplo, validadores
+    automáticos conseguem detectar se o atributo para descrever imagens foi
+    utilizado em todas as imagens do site, mas somente uma pessoa poderá
+    verificar se a descrição da imagem está adequada ao seu conteúdo. Para
+    realizar uma validação manual efetiva, o desenvolvedor deverá ter
+    conhecimento sobre as diferentes tecnologias, as barreiras de acessibilidade
+    enfrentadas por pessoas com deficiência e as técnicas ou recomendações de
+    acessibilidade. A validação manual deve ser feita preferencialmente com
+    dispositivos de tecnologia assistiva como leitores de tela. Deve-se
+    percorrer toda página apenas utilizando teclado, verificando comportamentos,
+    atalhos, folhas alternativas de contraste, se os textos alternativos estão
+    descritos de acordo com a imagem e seu contexto, entre outros; e
+  \item
+    teste com usuários reais. Outra etapa essencial da validação de uma página é
+    a realização de testes com usuários reais (PCD ou limitações técnicas). Um
+    usuário real poderá dizer se um site está realmente acessível, compreensível
+    e com boa usabilidade e não simplesmente tecnicamente acessível. Quanto
+    maior e mais diversificado o número de usuários reais participando da
+    avaliação de acessibilidade, mais eficaz e robusto será o resultado.
+\end{enumerate}
+
+\section{Manutenção de Acessibilidade}
+
+A promoção da acessibilidade é um processo contínuo, recomenda-se que testes
+sejam realizados, de forma pontual, a cada alteração de conteúdo e validações
+globais em espaços determinados de tempo. O intervalo depende de diversos
+fatores, mas a recomendação é que se valide o site todo quando for feita a
+atualização do sistema de gestão de conteúdo ou mudança de design.
+
+\section{Recomendações de Acessibilidade}
+
+Os padrões de acessibilidade compreendem recomendações ou diretrizes que visam
+tornar o conteúdo web acessível a todas as pessoas, inclusive às pessoas com
+deficiência, destinando-se aos autores de páginas, projetistas de sites e aos
+desenvolvedores de ferramentas para criação de conteúdo. Para facilitar a
+implementação das recomendações, no eMAG elas são separadas por seções de acordo
+com as necessidades de implementação:
+
+\begin{itemize}
+  \item marcação;
+  \item comportamento (DOM);
+  \item conteúdo/informação;
+  \item apresentação/design;
+  \item multimídia; e
+  \item formulários.
+\end{itemize}
+
+\subsection{Marcação}
+
+\begin{enumerate}
+  \item respeitar os padrões web;
+  \item organizar o código HTML de forma lógica e semântica;
+  \item utilizar corretamente os níveis de cabeçalho;
+  \item irdenar de forma lógica e intuitiva a leitura e tabulação;
+  \item fornecer âncoras para ir direto a um bloco de conteúdo;
+  \item não utilizar tabelas para diagramação;
+  \item separar links adjacentes;
+  \item dividir as áreas de informação; e
+  \item não abrir novas instâncias sem a solicitação do usuário.
+\end{enumerate}
+
+\subsection{Comportamento (DOM)}
+
+\begin{enumerate}
+  \item disponibilizar todas as funções da página via teclado;
+  \item garantir que os objetos programáveis sejam acessíveis;
+  \item não criar páginas com atualização automática periódica;
+  \item não utilizar redirecionamento automático de páginas;
+  \item fornecer alternativa para modificar limite de tempo;
+  \item não incluir situações com intermitência de tela; e
+  \item
+    assegurar o controle do usuário sobre as alterações temporais do conteúdo.
+\end{enumerate}
+
+\subsection{Conteúdo/Informação}
+
+\begin{enumerate}
+  \item identificar o idioma principal da página;
+  \item informar mudança de idioma no conteúdo;
+  \item oferecer um título descritivo e informativo à página;
+  \item informar o usuário sobre sua localização na página;
+  \item descrever links clara e sucintamente;
+  \item fornecer alternativa em texto para as imagens do sítio;
+  \item utilizar mapas de imagem de forma acessível;
+  \item disponibilizar documentos em formatos acessíveis;
+  \item em tabelas, utilizar títulos e resumos de forma apropriada;
+  \item associar células de dados às células de cabeçalho;
+  \item garantir a leitura e compreensão das informações; e
+  \item
+    disponibilizar uma explicação para siglas, abreviaturas e palavras incomuns.
+\end{enumerate}
+
+\subsection{Apresentação/Design}
+
+\begin{enumerate}
+  \item oferecer contraste mínimo entre plano de fundo e primeiro plano;
+  \item
+    não utilizar apenas cor ou outras características sensoriais para
+    diferenciar elementos;
+  \item permitir redimensionamento sem perda de funcionalidade; e
+  \item possibilitar que o elemento com foco seja visualmente evidente.
+\end{enumerate}
+
+\subsection{Multimídia}
+
+\begin{enumerate}
+  \item fornecer alternativa para vídeo;
+  \item fornecer alternativa para áudio;
+  \item oferecer audiodescrição para vídeo pré-gravado;
+  \item fornecer controle de áudio para som; e
+  \item fornecer controle de animação.
+\end{enumerate}
+
+\subsection{Formulários}
+
+\begin{enumerate}
+  \item fornecer alternativa em texto para os botões de imagem de formulários;
+  \item associar etiquetas aos seus campos;
+  \item estabelecer uma ordem lógica de navegação;
+  \item não provocar automaticamente alteração no contexto;
+  \item fornecer instruções para entrada de dados;
+  \item
+    identificar e descrever erros de entrada de dados e confirmar o envio das
+    informações;
+  \item agrupar campos de formulário; e
+  \item fornecer estratégias de segurança específicas ao invés de CAPTCHA.
+\end{enumerate}
+
+\section{Elementos Padronizados de Acessibilidade Digital no Governo Federal}
+
+Os elementos padronizados de acessibilidade digital que devem estar presentes em
+todos os sites do Governo Federal para facilitar o acesso ao cidadão:
+
+\begin{itemize}
+  \item teclas de atalho;
+  \item primeira folha de contraste;
+  \item barra de acessibilidade;
+  \item apresentação do mapa do site; e
+  \item página com a descrição dos recursos de acessibilidade.
+\end{itemize}
+
+\subsection{Teclas de Atalho}
+
+Deverão ser disponibilizados atalhos por teclado para pontos estratégicos da
+página, permitindo que o usuário possa ir diretamente a esses pontos. Eles devem
+funcionar através de números precedidos da tecla padrão de cada navegador, sendo
+os atalhos que devem existir os seguintes:
+
+\begin{enumerate}
+  \item para ir ao conteúdo;
+  \item para ir ao menu principal; e
+  \item para ir à caixa de pesquisa.
+\end{enumerate}
+
+As dicas dos atalhos deverão ser disponibilizadas na barra de acessibilidade e
+na página sobre a acessibilidade do site, já comentada anteriormente.
+
+\subsection{Primeira Folha de Contraste}
+
+O contraste deve gerar uma página em que a relação entre o plano de fundo e os
+elementos do primeiro plano seja de, no mínimo, 7:1 (chamado de contraste
+otimizado). Desta forma, a folha principal de alto contraste deve obedecer a
+seguinte configuração de cores:
+
+\begin{enumerate}
+  \item cor de fundo: alterar para preto (\texttt{\#000000});
+  \item cor de texto: alterar para branco (\texttt{\#FFFFFF});
+  \item
+    links: modo normal deve ser sublinhado (diferenciar do texto normal), assim
+    como o modo \textit{hover} e o modo \textit{active}. Link alterado para
+    amarelo (\texttt{\#FFF333});
+  \item ícones: todos os ícones devem ser brancos;
+  \item
+    linhas e contornos: linhas e contornos de elementos devem ser alterados para
+    branco.
+\end{enumerate}
 
 \chapter{Conclusão}
 
