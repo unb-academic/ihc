@@ -35,7 +35,7 @@
 \titulo{Guia de Acessibilidade Digital}
 \autor{Grupo 06}
 \local{Brasília, Brasil}
-\data{2024, v1.3.0}
+\data{2024, v1.4.0}
 \orientador{Rejane Figueiredo}
 \instituicao{
   Universidade de Brasília
@@ -140,8 +140,11 @@
   \item[TI] Tecnologia da Informação
   \item[W3C] \textit{World Wide Web Consortium}
   \item[WAI] \textit{Web Accessibility Initiative}
+  \item[WAI-ARIA]
+    \textit{
+      Web Accessibility Initiative - Accessible Rich Internet Applications
+    }
   \item[WCAG] \textit{Web Content Accessibility Guidelines}
-  \item[WAI-ARIA] \textit{Web Accessibility Initiative - Accessible Rich Internet Applications}
   \item[XHTML] \textit{eXtensible HyperText Markup Language}
   \item[XML] \textit{eXtensible Markup Language}
   % \item[DS] Design de Serviços
@@ -378,10 +381,10 @@ com as necessidades de implementação:
 \subsection{Marcação}
 
 \begin{enumerate}
-  \item respeitar os padrões web;
+  \item Respeitar os padrões web;
   \item organizar o código HTML de forma lógica e semântica;
   \item utilizar corretamente os níveis de cabeçalho;
-  \item irdenar de forma lógica e intuitiva a leitura e tabulação;
+  \item ordenar de forma lógica e intuitiva a leitura e tabulação;
   \item fornecer âncoras para ir direto a um bloco de conteúdo;
   \item não utilizar tabelas para diagramação;
   \item separar links adjacentes;
@@ -392,7 +395,7 @@ com as necessidades de implementação:
 \subsection{Comportamento (DOM)}
 
 \begin{enumerate}
-  \item disponibilizar todas as funções da página via teclado;
+  \item Disponibilizar todas as funções da página via teclado;
   \item garantir que os objetos programáveis sejam acessíveis;
   \item não criar páginas com atualização automática periódica;
   \item não utilizar redirecionamento automático de páginas;
@@ -405,7 +408,7 @@ com as necessidades de implementação:
 \subsection{Conteúdo/Informação}
 
 \begin{enumerate}
-  \item identificar o idioma principal da página;
+  \item Identificar o idioma principal da página;
   \item informar mudança de idioma no conteúdo;
   \item oferecer um título descritivo e informativo à página;
   \item informar o usuário sobre sua localização na página;
@@ -423,7 +426,7 @@ com as necessidades de implementação:
 \subsection{Apresentação/Design}
 
 \begin{enumerate}
-  \item oferecer contraste mínimo entre plano de fundo e primeiro plano;
+  \item Oferecer contraste mínimo entre plano de fundo e primeiro plano;
   \item
     não utilizar apenas cor ou outras características sensoriais para
     diferenciar elementos;
@@ -434,7 +437,7 @@ com as necessidades de implementação:
 \subsection{Multimídia}
 
 \begin{enumerate}
-  \item fornecer alternativa para vídeo;
+  \item Fornecer alternativa para vídeo;
   \item fornecer alternativa para áudio;
   \item oferecer audiodescrição para vídeo pré-gravado;
   \item fornecer controle de áudio para som; e
@@ -444,7 +447,7 @@ com as necessidades de implementação:
 \subsection{Formulários}
 
 \begin{enumerate}
-  \item fornecer alternativa em texto para os botões de imagem de formulários;
+  \item Fornecer alternativa em texto para os botões de imagem de formulários;
   \item associar etiquetas aos seus campos;
   \item estabelecer uma ordem lógica de navegação;
   \item não provocar automaticamente alteração no contexto;
@@ -499,10 +502,213 @@ seguinte configuração de cores:
     links: modo normal deve ser sublinhado (diferenciar do texto normal), assim
     como o modo \textit{hover} e o modo \textit{active}. Link alterado para
     amarelo (\texttt{\#FFF333});
-  \item ícones: todos os ícones devem ser brancos;
+  \item ícones: todos os ícones devem ser brancos; e
   \item
     linhas e contornos: linhas e contornos de elementos devem ser alterados para
     branco.
+\end{enumerate}
+
+\subsection{Barra de Acessibilidade}
+
+O site deverá conter uma barra de acessibilidade no topo de cada página
+contendo:
+
+\begin{enumerate}
+  \item alto contraste;
+  \item atalhos para menu, conteúdo e busca; e
+  \item
+    acessibilidade (link para a página contendo recursos de acessibilidade do
+    site).
+\end{enumerate}
+
+\subsection{Apresentação do Mapa do Site}
+
+O mapa do sítio deve ser disponibilizado em forma de lista hierárquica, podendo
+conter quantos níveis forem necessários e utilizando os elementos de lista do
+HTML.
+
+\subsection{Página com a Descrição dos Recursos de Acessibilidade}
+
+Recursos de acessibilidade presentes no site, como as teclas de atalho
+disponíveis, as opções de alto contraste, detalhes sobre testes de
+acessibilidade no site e outras informações pertinentes a respeito da
+acessibilidade, com o link para a página contendo os recursos de acessibilidade
+devem ser disponibilizados na barra de acessibilidade.
+
+O termo acessibilidade significa incluir a pessoa com deficiência na
+participação de atividades como o uso de produtos, serviços e informações. Na
+internet, acessibilidade refere-se principalmente às recomendações do WCAG, do
+W3C e no caso do governo brasileiro, o eMAG, que está devidamente alinhado às
+recomendações internacionais, entretanto, estabelece padrões de comportamento
+acessível para sites governamentais.
+
+Na parte superior do portal existe uma barra de acessibilidade que inclui
+atalhos navegáveis padronizados e opção para alterar o contraste da página. As
+ferramentas estão disponíveis em todas as páginas dos portais.
+
+Os atalhos padrões do Governo Federal são:
+
+\begin{itemize}
+  \item
+    teclando-se Alt + 1 em qualquer página do portal, chega-se diretamente ao
+    começo do conteúdo principal da página;
+  \item
+    teclando-se Alt + 2 em qualquer página do portal, chega-se diretamente ao
+    início do menu principal;
+  \item
+    teclando-se Alt + 3 em qualquer página do portal, chega-se diretamente em
+    sua busca interna; e
+  \item
+    teclando-se Alt + 4 em qualquer página do portal, chega-se diretamente ao
+    rodapé do site.
+\end{itemize}
+
+Esses atalhos valem para o navegador Chrome, mas existem algumas variações para
+outros navegadores:
+
+\begin{itemize}
+  \item
+    quem prefere utilizar o Internet Explorer é preciso apertar o botão Enter do
+    seu teclado após uma das combinações acima. Portanto, para chegar ao campo
+    de busca de interna é preciso pressionar Alt + 3 e depois Enter;
+  \item
+    no caso do Firefox, em vez de Alt + número, tecle simultaneamente Alt +
+    Shift + número;
+  \item
+    sendo Firefox no MacOS, em vez de Alt + Shift + número, tecle
+    simultaneamente Ctrl + Alt + número; e
+  \item
+    no Opera, as teclas são Shift + Escape + número. Ao teclar apenas Shift +
+    Escape, o usuário encontrará uma janela com todas as alternativas de
+    \texttt{ACCESSKEY} da página.
+\end{itemize}
+
+\subsection{Leis e Decretos sobre Acessibilidade}
+
+\begin{itemize}
+  \item Decreto nº 5.296 de 02 de dezembro de 2004 (link externo).
+  \item
+    Decreto nº 6.949, de 25 de agosto de 2009 (link externo) - Promulga a
+    Convenção Internacional sobre os Direitos das Pessoas com Deficiência e seu
+    Protocolo Facultativo, assinados em Nova York, em 30 de março de 2007.
+  \item
+    Decreto nº 7.724, de 16 de Maio de 2012 (link externo) - Regulamenta a Lei
+    Nº 12.527, que dispõe sobre o acesso a informações.
+  \item Modelo de Acessibilidade de Governo Eletrônico (link externo)
+  \item
+    Portaria nº 03, de 07 de Maio de 2007 - formato .pdf (35,5Kb) (link externo)
+    - Institucionaliza o Modelo de Acessibilidade em Governo Eletrônico - e-AG
+\end{itemize}
+
+\subsection{Práticas Desaconselhadas}
+
+Algumas práticas, apesar de comuns, configuram grande dificuldade de acesso nos
+mais diversos tipos de dispositivos, sendo as principais:
+
+\begin{enumerate}
+  \item uso de animações e aplicações FLASH;
+  \item uso de CAPTCHAS em formulários;
+  \item tabelas para fins de diagramação;
+  \item atualizações automáticas periódicas; e
+  \item
+    elementos e atributos considerados depreciados pelo W3C. Exemplos:
+    \texttt{frame}, \texttt{applet}, \texttt{blink}, \texttt{marquee},
+    \texttt{basefont}, \texttt{center}, \texttt{dir}, \texttt{align},
+    \texttt{font}, \texttt{isindex}, \texttt{menu}, \texttt{strike}, \texttt{u},
+    \texttt{b}, etc.
+\end{enumerate}
+
+O uso de qualquer uma dessas práticas tem um impacto negativo significativo na
+experiência de uso do usuário.
+
+Ao final desta etapa, espera-se do profissional de TI que:
+
+\begin{enumerate}
+  \item O profissional de TI compreenda os Conceitos de Acessibilidade.
+  \begin{enumerate}
+    \item Conheça o eMAG e suas recomendações.
+    \item Entenda as necessidades específicas de PCDs.
+    \item
+      Formalidade com os padrões internacionais de acessibilidade, como WCAG e
+      W3C.
+  \end{enumerate}
+  \item Seja capaz de planejar e desenvolver sistemas acessíveis.
+  \begin{enumerate}
+    \item Que sigam os padrões e diretrizes de acessibilidade.
+    \item
+      Que implementem código semântico e estruturado conforme definições
+      internacionais presentes na documentação da W3C.
+    \item Que possua organização lógica e intuitiva do código HTML e CSS.
+  \end{enumerate}
+  \item Possa fazer o design e apresentação de conteúdo acessível.
+  \begin{enumerate}
+    \item
+      Que garanta contraste adequado entre plano de fundo e elementos do
+      primeiro plano.
+    \item Que utilize cores e características sensoriais de forma adequada.
+    \item
+      Que tenha capacidade de redimensionamento do conteúdo sem perda de
+      funcionalidades.
+  \end{enumerate}
+  \item Consiga implementar funcionalidades acessíveis.
+  \begin{enumerate}
+    \item Que disponibilize funções da página via teclado.
+    \item Que garanta acessibilidade de objetos programáveis.
+    \item
+      Que forneça alternativas de acesso para multimídia, incluindo áudio e
+      vídeo.
+  \end{enumerate}
+  \item Faça o desenvolvimento de formulários acessíveis.
+  \begin{enumerate}
+    \item Que associe etiquetas aos campos de formulário.
+    \item Que estabeleça uma ordem de navegação.
+    \item
+      Que fornece instruções claras para entrada dos dados do usuário e
+      identificação de possíveis erros.
+  \end{enumerate}
+  \item
+    Implemente e identifique elementos padronizados de acessibilidade no Governo
+    Federal.
+  \begin{enumerate}
+    \item
+      Que tenha configuração de teclas de atalho para facilitar a navegação em
+      determinado sistema de informação.
+    \item Que implemente uma barra de acessibilidade no topo das páginas.
+    \item
+      Que crie uma página de descrição com recursos de acessibilidade presentes
+      no sistema web.
+  \end{enumerate}
+  \item Seja capaz de realizar a avaliação e teste de acessibilidade do site.
+  \begin{enumerate}
+    \item Utilizar validações automáticas com ferramentas específicas.
+    \item
+      Executar validações manuais que verificam aspectos que precisam
+      necessariamente de julgamento humano.
+    \item
+      Conduzir testes com usuários reais a fim de garantia de usabilidade e
+      acessibilidade na prática.
+  \end{enumerate}
+  \item Consiga dar manutenção da acessibilidade.
+  \begin{enumerate}
+    \item
+      Com testes periódicos de acessibilidade após cada alteração de conteúdo.
+    \item
+      Com sistema de validação global em intervalos pré-definidos, especialmente
+      após grandes atualizações no sistema.
+  \end{enumerate}
+  \item Conheça as Leis e Regulamentações específicas sobre acessibilidade.
+  \begin{enumerate}
+    \item Tenha familiaridade com os decretos nº 5.296, 6.949, e 7.724.
+    \item Compreenda os impactos legais e éticos da acessibilidade na web.
+  \end{enumerate}
+  \item Evite práticas desaconselhadas.
+  \begin{enumerate}
+    \item Evitar o uso de animações e aplicações FLASH.
+    \item Evitar o uso de CAPTCHAS em formulários.
+    \item Evitar o uso de tabelas para fins de diagramação.
+    \item Evitar atualizações automáticas periódicas.
+    \item Evitar o uso de elementos e atributos depreciados pelo W3C.
+  \end{enumerate}
 \end{enumerate}
 
 \chapter{Conclusão}
