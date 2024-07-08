@@ -131,13 +131,17 @@
 \begin{siglas}
   \item[ASES] Avaliador e Simulador de Acessibilidade em Sítios
   \item[CSS] \textit{Cascading Style Sheets}
+  \item[DCU] Design Centrado no Usuário
   \item[DOM] \textit{Document Object Model}
   \item[eMAG] Modelo de Acessibilidade em Governo Eletrônico
-  \item[IHC] Interação Humano-Computador
+  \item[GOMS] \textit{Goals, Operators, Methods, and Selection rules}
   \item[HTML] \textit{HyperText Markup Language}
   \item[IBGE] Instituto Brasileiro de Geografia e Estatística
+  \item[IHC] Interação Humano-Computador
   \item[PCD] Pessoas com Deficiência
   \item[TI] Tecnologia da Informação
+  \item[UCD] \textit{User-Centered Design}
+  \item[UX] \textit{User Experience}
   \item[W3C] \textit{World Wide Web Consortium}
   \item[WAI] \textit{Web Accessibility Initiative}
   \item[WAI-ARIA]
@@ -148,8 +152,6 @@
   \item[XHTML] \textit{eXtensible HyperText Markup Language}
   \item[XML] \textit{eXtensible Markup Language}
   % \item[DS] Design de Serviços
-  % \item[UCD] \textit{User-Centered Design}
-  % \item[UX] \textit{User Experience}
   % \item[ISO] \textit{International Organization for Standardization}
   % \item[IHIP] \textit{Intangible, Heterogeneous, Inseparable and Perishable}
 \end{siglas}
@@ -205,6 +207,368 @@ Ao final desta etapa, espera-se do profissional de TI que:
     compreenda o impacto que introduzir acessibilidade no cotidiano do
     desenvolvimento pode acarretar na população.
 \end{itemize}
+
+\chapter{IHC Não é Engenharia de Software, Mas...}
+
+\section{Abordagens Teóricas em IHC}
+
+A Interação Humano-Computador (IHC) é uma área interdisciplinar que foca no
+design, avaliação e implementação de sistemas computacionais interativos com
+ênfase nas interfaces entre usuários humanos e computadores. O objetivo é
+melhorar a usabilidade e a experiência do usuário, tornando os sistemas mais
+eficientes e intuitivos.
+
+Diferentes abordagens teóricas em IHC buscam entender e melhorar essa interação,
+essas abordagens teóricas servem como bússolas, guiando o design e a avaliação
+de sistemas que conectam pessoas e tecnologias. Aprofundando nessas abordagens,
+desvendamos os princípios que fundamentam a criação de interfaces intuitivas,
+eficientes e agradáveis.
+
+\begin{itemize}
+  \item \textbf{Psicologia Cognitiva}
+
+    A psicologia cognitiva é um pilar fundamental na IHC, explorando os
+    mecanismos internos da mente humana que moldam a forma como interagimos com
+    computadores. Essa abordagem é crucial para entender como as pessoas
+    processam informações e como os sistemas computacionais podem ser projetados
+    para apoiar esses processos. Modelos como o GOMS (Goals, Operators, Methods,
+    and Selection rules) ajudam a prever o desempenho do usuário.
+
+  \item \textbf{Etnografia}
+
+    A etnografia envolve a observação e descrição detalhada das atividades dos
+    usuários em seus contextos naturais. Através dessa observação podemos
+    desvendar seus comportamentos, necessidades e motivações, contextualizando a
+    interação com a tecnologia. Isso ajuda a entender como a tecnologia é
+    realmente usada e pode revelar problemas e oportunidades que não seriam
+    visíveis através de outros métodos.
+
+  % Para evitar um overbox nessa parte, foi necessário quebrar a lista em duas
+  % partes.
+  \newpage
+
+  \item \textbf{Design Centrado no Usuário (DCU)}
+
+    O DCU destaca-se como uma filosofia de design que coloca as necessidades,
+    desejos e expectativas dos usuários no centro do processo de
+    desenvolvimento. Através de métodos como entrevistas, questionários e testes
+    de usabilidade, podemos obter feedbacks valiosos dos usuários e moldar o
+    sistema de acordo com suas expectativas e demandas.
+\end{itemize}
+
+\section{Processos de Design de IHC}
+
+Os processos de design de IHC são estruturados para criar interfaces que sejam
+eficientes, eficazes e agradáveis para os usuários. Os principais processos são:
+
+\begin{enumerate}
+  \item Pesquisa e Análise de Usuários
+  \begin{itemize}
+    \item
+      Entendimento do Contexto de Uso: compreender o ambiente e as condições de
+      uso da aplicação.
+    \item
+      Perfis de Usuários (Personas): criar representações dos diferentes tipos
+      de usuários.
+    \item
+      Análise de Tarefas: identificar e detalhar as tarefas que os usuários
+      precisam realizar.
+  \end{itemize}
+  \item Requisitos e Especificações
+  \begin{itemize}
+    \item Requisitos Funcionais: definir o que a aplicação deve fazer.
+    \item
+      Requisitos Não-Funcionais: definir como a aplicação deve se comportar,
+      considerando usabilidade, acessibilidade, etc.
+    \item
+      Requisitos de Usuário: identificar as necessidades e expectativas dos
+      usuários.
+  \end{itemize}
+  \item Design de Interface
+  \begin{itemize}
+    \item
+      Sketches e Wireframes: criar desenhos iniciais para mostrar a estrutura
+      básica da interface gráfica.
+    \item
+      Protótipos de Baixa Fidelidade: desenvolver protótipos simples para testes
+      iniciais.
+    \item
+      Protótipos de Alta Fidelidade: criar protótipos interativos e detalhados,
+      próximos do produto final.
+  \end{itemize}
+  \item Avaliação e Testes
+  \begin{itemize}
+    \item
+      Testes de Usabilidade: realizar testes com usuários reais para identificar
+      problemas.
+    \item
+      Avaliações Heurísticas: especialistas em usabilidade avaliam a interface
+      com base em heurísticas.
+    \item Feedback dos Usuários: coletar opiniões e sugestões dos usuários.
+  \end{itemize}
+  \item Implementação
+  \begin{itemize}
+    \item Desenvolvimento: programar a interface conforme o design especificado.
+    \item Integração: integrar a interface com outros sistemas e componentes.
+  \end{itemize}
+  \item Lançamento e Manutenção
+  \begin{itemize}
+    \item \textit{Deploy}: lançar a interface para os usuários finais.
+    \item
+      Monitoramento: acompanhar o uso da interface e coletar dados de desempenho
+      e usabilidade.
+    \item
+      Atualizações: melhorar e corrigir a interface com base no feedback dos
+      usuários e nas métricas coletadas.
+  \end{itemize}
+  \item Metodologias e Abordagens
+  \begin{itemize}
+    \item
+      Design Centrado no Usuário (DCU): foco principal nas necessidades e
+      características dos usuários.
+    \item
+      \textit{Design Thinking}: processo iterativo que envolve empatia,
+      definição de problemas, ideação, prototipagem e teste.
+    \item
+      Métodos Ágeis: iterações curtas de design e desenvolvimento com feedback
+      contínuo dos usuários.
+  \end{itemize}
+\end{enumerate}
+
+Essas etapas são frequentemente iterativas, permitindo ajustes e refinamentos
+contínuos para garantir uma experiência de usuário de alta qualidade,
+satisfazendo suas necessidades e expectativas.
+
+\section{Identificação de Necessidades dos Usuários}
+
+Identificar as necessidades dos usuários é uma parte fundamental no processo de
+design de IHC. É um processo que visa entender as reais necessidades,
+expectativas e problemas enfrentados pelos usuários, e somente após essa
+compreensão desenvolver interfaces que atendam efetivamente a essas demandas. Os
+principais métodos para identificar as necessidades dos usuários são:
+
+\begin{enumerate}
+  \item Entrevistas
+  \begin{itemize}
+    \item
+      Entrevistas Estruturadas: perguntas pré-definidas para obter informações
+      específicas.
+    \item
+      Entrevistas Não-Estruturadas: conversas livres para explorar profundamente
+      os pensamentos e sentimentos dos usuários.
+  \end{itemize}
+  \item Observação
+  \begin{itemize}
+    \item
+      Observação Direta: assistir os usuários enquanto eles interagem com o
+      sistema ou realizam tarefas em seu ambiente natural.
+    \item
+      Etnografia: imersão no ambiente dos usuários para entender o contexto e as
+      práticas cotidianas.
+  \end{itemize}
+  \item Questionários e Pesquisas
+  \begin{itemize}
+    \item
+      Questionários: coletar dados quantitativos e qualitativos através de
+      perguntas fechadas e abertas.
+    \item
+      Pesquisas Online: distribuir questionários amplamente para alcançar um
+      grande número de usuários.
+  \end{itemize}
+  \item Estudos de Usabilidade
+  \begin{itemize}
+    \item
+      Testes de Usabilidade: observar os usuários enquanto eles tentam completar
+      tarefas específicas com o sistema.
+    \item
+      Feedback Pós-Tarefa: coletar feedback imediato dos usuários após a
+      realização de tarefas.
+  \end{itemize}
+  \item Personas e Cenários
+  \begin{itemize}
+    \item
+      Criação de Personas: desenvolver perfis fictícios de usuários baseados em
+      dados reais para representar diferentes tipos de usuários.
+    \item
+      Desenvolvimento de Cenários: criar histórias que descrevem como os
+      usuários interagem com o sistema em diferentes situações.
+  \end{itemize}
+\end{enumerate}
+
+A combinação desses métodos ajuda a criar um entendimento abrangente das
+necessidades dos usuários, garantindo que o design final seja relevante e
+eficaz.
+
+\section{Jornada do Usuário} \label{user-journey}
+
+É uma sequência de passos necessários que o usuário deve realizar para completar
+um objetivo com uma empresa ou produto, geralmente mostrado em relação ao tempo
+(do primeiro contato até a fidelização) ou em relação aos canais. Esta jornada
+inclui todas as etapas, interações e emoções que o usuário experimenta ao longo
+do caminho. O objetivo de mapear a jornada do usuário é entender melhor as
+necessidades, expectativas e possíveis frustrações do usuário, para melhorar a
+experiência e a satisfação geral.
+
+Entenda canais como as diferentes fontes de comunicação e/ou origens de
+informação que o usuário pode usar para se comunicar com o produto ou com a
+empresa.
+
+Vamos citar um exemplo prático. Na compra de um livro pela internet, as etapas
+da jornada do usuário incluem:
+
+\begin{enumerate}
+  \item Descoberta do livro
+  \item Pesquisa do livro em diferentes sites
+  \item Comparação de preço
+  \item Leitura das avaliações de outros usuários
+  \item Compra
+  \item Recebimento do produto
+  \item Leitura do livro
+  \item Feedback e fidelização
+\end{enumerate}
+
+Desse jeito, podemos mapear a jornada do usuário da seguinte forma:
+
+\begin{itemize}
+  \item Definir o objetivo do usuário
+  \item Identificar as etapas da jornada
+  \item Mapear os pontos de interação
+  \item Identificar pontos de melhoria
+  \item Desenhar o mapa da jornada do usuário
+\end{itemize}
+
+Exemplos de ferramentas para mapear a jornada do usuário são:
+
+\begin{enumerate}
+  \item
+    Figma: utilizado para design de interfaces e prototipagem, permite a criação
+    de \textit{wireframes} e protótipos interativos.
+  \item
+    Miro: ideal para \textit{brainstorming}, mapeamento de jornada e diagramas.
+  \item
+    Sketch: ferramenta de design digital focada em criação de interfaces,
+    oferece integração com diversos plugins para UX.
+  \item
+    Lucidchart: ferramenta para criação de diagramas e mapas de processos, útil
+    para mapear visualmente a jornada do usuário.
+\end{enumerate}
+
+\section{Fluxo do Usuário}
+
+É um conjunto de instruções ou de interações necessárias que descrevem um
+conjunto ideal de passos que o usuário deve realizar para executar uma tarefa
+específica com um produto. O fluxo de usuário detalha cada passo que o usuário
+dá, desde a entrada inicial até a conclusão da tarefa, mostrando as escolhas,
+ações e feedbacks ao longo do caminho.
+
+O objetivo do fluxo do usuário é garantir que a experiência seja intuitiva,
+eficiente e sem obstáculos, facilitando a realização das metas do usuário. Esse
+conceito é fundamental em design de UX e desenvolvimento de produtos digitais.
+
+Seguindo o exemplo do tópico anterior (\ref{user-journey}) na compra de um livro
+pela internet, as etapas do fluxo do usuário incluem:
+
+\begin{enumerate}
+  \item Descoberta do Livro
+  \begin{itemize}
+    \item
+      Ação: o usuário descobre um livro através de redes sociais ou através da
+      recomendação de um amigo.
+  \end{itemize}
+  \item Pesquisa do Livro em Diferentes Sites
+  \begin{itemize}
+    \item
+      Ação: o usuário pesquisa o título do livro e visita diferentes sites de
+      livrarias online.
+  \end{itemize}
+  \item Comparação de Preço
+  \begin{itemize}
+    \item Ação: o usuário compara preços do livro em várias livrarias online.
+    \item
+      Possíveis Frustrações: diferenças de preço significativas e custos de
+      envio altos.
+  \end{itemize}
+  \item Leitura das Avaliações de Outros Usuários
+  \begin{itemize}
+    \item
+      Ação: o usuário lê avaliações e comentários de outros leitores para
+      avaliar a qualidade do livro.
+    \item
+      Possíveis Frustrações: avaliações contraditórias ou ausência de avaliações
+      suficientes.
+  \end{itemize}
+  \item Compra
+  \begin{itemize}
+    \item
+      Ação: o usuário adiciona o livro ao carrinho, insere as informações de
+      pagamento e finaliza a compra.
+    \item
+      Possíveis Frustrações: problemas de pagamento ou falta de opções de
+      pagamento.
+  \end{itemize}
+  \item Recebimento do Produto
+  \begin{itemize}
+    \item Ação: o usuário recebe o livro em casa.
+    \item
+      Possíveis Frustrações: atrasos na entrega ou estado danificado do produto.
+  \end{itemize}
+  \item Leitura do Livro
+  \begin{itemize}
+    \item Ação: o usuário lê o livro.
+    \item
+      Possíveis Frustrações: qualidade do produto não corresponder às
+      expectativas.
+  \end{itemize}
+  \item Feedback e Fidelização
+  \begin{itemize}
+    \item
+      Ação: o usuário deixa uma avaliação do livro e possivelmente segue a loja
+      da livraria nas redes sociais.
+  \end{itemize}
+\end{enumerate}
+
+As mesmas ferramentas citadas no tópico anterior (\ref{user-journey}) também
+servem para realizar o mapeamento do fluxo do usuário.
+
+\section{Mapa de Jornada}
+
+Um mapa de jornada é uma visualização do processo que uma pessoa passa com o
+intuito de cumprir um determinado objetivo. Em sua forma mais básica, começa
+compilando uma série de ações do usuário dentro de uma linha do tempo. Em
+seguida, a linha do tempo é desenvolvida com pensamentos e emoções do usuário a
+fim de criar uma narrativa. Essa narrativa é condensada e polida, levando a uma
+visualização.
+
+Esse tipo de modelo é dividido em três seções verticais: o topo mostra a
+persona, um cenário e um objetivo específico, o meio mostra fases de alto nível
+que compreendem ações, pensamentos, emoções do usuário, e o final mostra as
+conclusões, \textit{insights} e propriedades internas daquele mapa.
+
+\section{Ponto de Serviço}
+
+O ponto de serviço é focado para visualizar as relações entre componentes
+diferentes de serviços (como pessoas, negócios ou processos) em diversos pontos
+de contato em uma jornada específica de um cliente. Você pode enxergar um mapa
+de jornada como um mapa turístico de uma cidade, mostrando a rota do turista e
+destacando pontos de interesse. Em contrapartida, o ponto de serviço seria um
+mapa da cidade da perspectiva de um planejador urbano, mostrando o layout de
+ruas, edifícios e infraestrutura. Mapas de jornada são melhores para entender a
+experiência do usuário, enquanto planos de serviço são melhores para documentar
+e aprimorar processos de serviço.
+
+\begin{figure}[htb]
+  \caption{\label{service-blueprint} Exemplo de ponto de serviço}
+  \begin{center}
+    \includegraphics[width=0.85\textwidth]{assets/service-blueprint.png}
+  \end{center}
+  \legend{Fonte: Página do Miro \cite{Miro:Service-Blueprints}}
+\end{figure}
+
+% Para evitar que o quadro fique na página seguinte, foi necessário quebrar a
+% página.
+\newpage
+
+\section{Mapa de História do Usuário}
 
 \chapter{Modelo de Acessibilidade}
 
