@@ -143,6 +143,7 @@
   \item[MDHC] Ministério dos Direitos Humanos e Cidadania
   \item[IHC] Interação Humano-Computador
   \item[PCD] Pessoas com Deficiência
+  \item[SEO] \textit{Search Engine Optimization}
   \item[SNDPD] Secretaria Nacional dos Direitos da Pessoa com Deficiência
   \item[TI] Tecnologia da Informação
   \item[TIC] Tecnologias de Informação e Comunicação
@@ -1312,6 +1313,228 @@ Realizar testes de usabilidade é um investimento que garante a qualidade do sit
 e evita custos com retrabalho, perda de credibilidade e prejuízo à imagem. Ao
 contratar uma empresa de consultoria em usabilidade, é importante observar a
 formação dos consultores, a metodologia aplicada e o portfólio.
+
+\section{Cartilha de Codificação}
+
+Esta cartilha, parte do projeto ePWG do Programa de Governo Eletrônico, orienta
+o desenvolvimento de sites, portais e serviços do governo eletrônico, visando
+torná-los acessíveis, relevantes e eficientes para a população. O objetivo é
+estabelecer boas práticas de codificação para garantir a qualidade,
+portabilidade, acessibilidade e efetividade dos sites e portais do governo.
+
+\subsection{Princípios}
+
+\begin{itemize}
+  \item \textbf{Páginas Leves:} priorizar páginas com até 50kb (idealmente 70kb) incluindo código, conteúdo e imagens.
+  \item \textbf{Separação de Conteúdo e Apresentação:} utilizar folhas de estilo (CSS) para formatação, separando a estrutura do conteúdo da aparência.
+  \item \textbf{Conformidade com Padrões Web:} seguir as especificações abertas do W3C, garantindo acessibilidade a todos.
+  \item \textbf{Independência de Navegador e Plataforma:} evitar tags e comandos proprietários que limitam a compatibilidade.
+\end{itemize}
+
+\subsection{Padrões Web}
+
+\begin{itemize}
+  \item Camadas de Codificação:
+  \begin{itemize}
+    \item \textbf{Conteúdo:} estrutura do conteúdo com HTML, XHTML, WML ou XML.
+    \item \textbf{Apresentação:} estilo e visual com CSS e XSLT.
+    \item \textbf{Comportamento:} funcionalidades e interações com JavaScript e DOM.
+  \end{itemize}
+  \item \textbf{HTML e XHTML:} utilizar a linguagem de marcação de hipertexto de forma válida e semântica, garantindo compatibilidade e acessibilidade.
+  \item \textbf{CSS:} controlar a aparência do documento com regras CSS para diferentes dispositivos.
+\end{itemize}
+
+\subsection{Recomendações}
+
+\begin{itemize}
+  \item Gerais:
+  \begin{itemize}
+    \item Arquivos externos para CSS e JavaScript.
+    \item Limitar requisições HTTP.
+    \item Recursos de impressão amigáveis.
+    \item Evitar frames e pop-ups.
+    \item Documentação completa do código.
+    \item URLs amigáveis e funcionais.
+    \item Evitar elementos e atributos desusados ou proprietários.
+    \item Utilização parcimoniosa de elementos HTML e classes.
+    \item Evitar tabelas para layouts.
+  \end{itemize}
+  \item Cabeçalho:
+  \begin{itemize}
+    \item Doctype correto.
+    \item Declaração de idioma.
+    \item Título relevante.
+    \item Codificação de caracteres (UTF-8).
+  \end{itemize}
+  \item Corpo:
+  \begin{itemize}
+    \item Elementos HTML corretos.
+    \item Um único elemento H1.
+    \item Marcação adequada de listas.
+    \item Tabelas para dados tabulares.
+    \item Formulários acessíveis.
+  \end{itemize}
+  \item CSS:
+  \begin{itemize}
+    \item Folhas externas.
+    \item Acessibilidade sem CSS.
+    \item Nomes de classes e IDs com base na função.
+    \item Organização lógica.
+    \item Abreviações e unidades.
+    \item Famílias de fontes alternativas.
+    \item Unidades relativas de tamanho.
+    \item Nomes de classes e IDs com letras.
+  \end{itemize}
+  \item Scripts e Cookies:
+  \begin{itemize}
+    \item Scripts com propósito relevante.
+    \item Acessibilidade com scripts desabilitados.
+    \item Evitar soluções proprietárias.
+    \item Alternativa para conteúdo script.
+    \item Informação sobre cookies.
+    \item Recusa de cookies sem perda de funcionalidade.
+  \end{itemize}
+  \item Arquivos e Plugins:
+  \begin{itemize}
+    \item Necessidade de arquivos para download.
+    \item Nomes de arquivos informativos.
+    \item Evitar formatos proprietários.
+    \item Alternativas em texto para vídeos e áudios.
+    \item Informação sobre tamanho e formato dos arquivos.
+    \item Necessidade de plugins.
+    \item Avisos sobre plugins e endereço de download.
+    \item Sem instalação para acesso inicial.
+  \end{itemize}
+  \item Orientações para Testes:
+  \begin{itemize}
+    \item \textbf{Validação:} verificar a conformidade do código com as regras de linguagem.
+    \item \textbf{Resoluções de Vídeo:} testar em diferentes resoluções.
+    \item \textbf{Navegadores e Sistemas:} testar em diversos navegadores e sistemas.
+    \item \textbf{Outros Dispositivos:} adaptar para dispositivos móveis e verificar a impressão.
+    \item \textbf{Teste em Camadas:} verificar acessibilidade com imagens, CSS e JavaScript desabilitados.
+    \item \textbf{Teste de Acessibilidade:} utilizar ferramentas de validação e testes com usuários com necessidades especiais.
+  \end{itemize}
+  \item Problemas Comuns:
+  \begin{itemize}
+    \item \textbf{Modelo de Caixa:} diferentes interpretações entre navegadores.
+    \item \textbf{Acessibilidade de Imagens:} problemas com textos substituídos por imagens.
+    \item \textbf{Lapso de Renderização do IE:} problemas com a regra \texttt{@import} no IE.
+  \end{itemize}
+  \item Lista de Verificação:
+  \begin{itemize}
+    \item Verificar se todas as recomendações foram cumpridas.
+  \end{itemize}
+  \item Recursos:
+  \begin{itemize}
+    \item \textbf{Validadores de Código:} W3C Validator, HTML Tidy.
+    \item \textbf{Ferramentas de Teste:} BrowserStack, IE Tester, VirtualBox.
+    \item \textbf{Ferramentas de Acessibilidade:} WAVE, aXe.
+    \item \textbf{Análise de Contraste:} Color Contrast Checker.
+  \end{itemize}
+\end{itemize}
+
+Este guia serve como referência para equipes que desenvolvem sites e portais do
+governo, promovendo a criação de plataformas web de alta qualidade, acessíveis e
+eficientes para o cidadão. A aplicação das recomendações garante a melhor
+experiência do usuário, reduzindo custos e otimizando o processo de
+desenvolvimento.
+
+\section{Cartilha de Redação Web (\textit{Webwriting})}
+
+Esta cartilha, parte do projeto ePWG do Programa de Governo Eletrônico
+\cite{ePWG}, orienta a produção de conteúdo para sites, portais e serviços do
+governo eletrônico, com foco na clareza, relevância e eficácia da comunicação
+com o cidadão. O objetivo é estabelecer boas práticas de redação web para
+garantir que o conteúdo seja claro, estruturado e eficaz para o meio digital,
+contribuindo para a construção de um universo de informações úteis e
+consistentes.
+
+\subsection{Princípios}
+
+\begin{itemize}
+  \item \textbf{Persuasão:} captar a atenção do cidadão e despertar o interesse por meio de linguagem clara e atrativa.
+  \item \textbf{Objetividade:} fornecer informações completas e relevantes, sem rodeios e sem redundâncias.
+  \item \textbf{Relevância:} manter o conteúdo atualizado e destacado, garantindo que ele seja encontrado pelo cidadão.
+  \item \textbf{Credibilidade:} garantir a precisão e confiabilidade das informações por meio de checagem e revisão rigorosas.
+  \item \textbf{Abrangência:} ressaltar os benefícios do acesso à informação e serviços online, como praticidade, atualização e contato rápido.
+\end{itemize}
+
+\subsection{Metáfora da Cebola}
+
+\begin{itemize}
+  \item \textbf{Camada de Apresentação:} primeira página com destaques que chamam a atenção do cidadão para o conteúdo.
+  \item \textbf{Camada Genérica:} textos principais com informações básicas sobre o tema.
+  \item \textbf{Camadas de Detalhamento:} páginas com informações mais aprofundadas e detalhadas.
+\end{itemize}
+
+\subsection{Títulos, Textos e Links}
+
+\begin{itemize}
+  \item \textbf{Títulos para Destaques}: Utilizar palavras-chave que identifiquem o conteúdo e auxiliem na localização da informação.
+  \item \textbf{Textos de Destaques:} Ser conciso e persuasivo, utilizando linguagem que incite o cidadão a acessar o conteúdo.
+  \item \textbf{Títulos para Textos Principais:} Incluir a palavra-chave ou expressão-chave do tema, garantindo identificação e clareza.
+  \item \textbf{Textos Principais:} Começar com o ponto mais relevante, utilizar frases curtas, organizar o conteúdo em itens, destacar palavras-chave em negrito.
+  \item \textbf{Títulos para Textos de Detalhamento:} Incluir novas palavras-chave para cada camada de detalhamento, criando uma estrutura hierárquica de informação.
+  \item \textbf{Textos de Detalhamento:} Fornecer informações completas e detalhadas, utilizando linguagem clara e objetiva.
+  \item \textbf{Links:} Utilizar links de forma estratégica para complementar a informação e direcionar o cidadão para outros conteúdos relevantes.
+\end{itemize}
+
+\subsection{Imagem, Áudio e Vídeo}
+
+\begin{itemize}
+  \item \textbf{Imagem:} fotografia, ilustração, ícone e infográfico devem complementar o conteúdo textual e gerar maior impacto visual.
+  \item \textbf{Áudio:} utilizar arquivos de áudio para complementar a informação textual, mas sempre oferecer transcrição para garantir acessibilidade.
+  \item \textbf{Vídeo:} utilizar vídeos para transmitir informações com grande impacto emocional, garantindo legendas e transcrições para acessibilidade.
+\end{itemize}
+
+\subsection{Redação para Seções Comuns}
+
+\begin{itemize}
+  \item \textbf{Conteúdo Institucional:} apresentar informações claras e objetivas sobre o órgão ou entidade, evitando textos introdutórios longos.
+  \item \textbf{Conteúdo sobre Serviços:} fornecer informações detalhadas sobre os serviços, incluindo o que é o serviço, a quem se destina, a documentação necessária, dúvidas frequentes e legislação.
+  \item Seções de Comunicação e Relacionamento:
+  \begin{itemize}
+    \item \textbf{Fale Conosco:} criar uma seção amigável e eficiente para receber e responder às solicitações dos cidadãos.
+    \item \textbf{Ajuda:} criar uma seção com perguntas e respostas frequentes, organizada em categorias.
+    \item \textbf{Visita Guiada:} apresentar o site, suas seções e funcionalidades para novos visitantes.
+  \end{itemize}
+\end{itemize}
+
+\subsection{Redação para Mídias Sociais}
+
+\begin{itemize}
+  \item Blogs Corporativos: utilizar um tom mais informal e transparente, com posts sobre temas relevantes e de interesse do cidadão.
+  \item Microblogs: ser conciso e objetivo, utilizando linguagem direta e incluindo links para o site.
+\end{itemize}
+
+\subsection{Responsabilidade com o Conteúdo}
+
+\begin{itemize}
+  \item \textbf{Arquitetura da Informação:} criar uma estrutura lógica e organizada para o site, facilitando a navegação e a localização de informações.
+  \item \textbf{Usabilidade:} projetar páginas web intuitivas e fáceis de usar, com foco na experiência do usuário.
+  \item \textbf{Otimização para Sistemas de Busca:} utilizar metadados e técnicas de SEO para melhorar o posicionamento do site nos resultados de busca.
+  \item \textbf{Acessibilidade Digital:} adaptar o conteúdo para pessoas com deficiência, utilizando recursos como texto alternativo para imagens, legendas para vídeos e transcrição de áudios.
+  \item \textbf{Direito Digital:} observar as leis de direito autoral e privacidade ao utilizar imagens, textos e informações de outros sítios.
+\end{itemize}
+
+\subsection{Ortografia e Gramática}
+
+\begin{itemize}
+  \item Observar as regras do Acordo Ortográfico da Língua Portuguesa, com foco em acentuação e hífen.
+  \item Prestar atenção aos pontos de dificuldade comuns, como crase, vírgula, ponto e vírgula e ponto de exclamação.
+\end{itemize}
+
+\subsection{Recursos}
+
+\begin{itemize}
+  \item Lista de livros e sites sobre redação web, arquitetura da informação, usabilidade, SEO, blogs corporativos, marketing digital, acessibilidade digital e direito digital.
+\end{itemize}
+
+Esta cartilha serve como guia para equipes que produzem conteúdo para sites e
+portais do governo, auxiliando na criação de conteúdo claro, relevante e eficaz
+para o cidadão. A aplicação das recomendações garante uma melhor experiência
+para o usuário, otimiza o processo de desenvolvimento e fortalece a comunicação
+do governo com a sociedade.
 
 \chapter{Referências e Modelos de Implementação}
 
